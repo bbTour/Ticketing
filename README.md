@@ -1,6 +1,8 @@
-# BBTour Ticketing
+# BBTour Ticketing | Dev branch
 
 A ticketing project for BBTour Jakarta.
+
+This branch is created for development purpose. **Do not push anything experimental to [master](https://github.com/bbTour/Ticketing/tree/master) branch.**
 
 ## Team
 
