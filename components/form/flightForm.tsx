@@ -2,7 +2,7 @@ import { FormEvent, Fragment, useContext, useRef } from "react";
 
 import DateFormatted from "@/pages/api/date";
 import flightFormCtx, { SubmitType } from "@/store/formContext";
-import Button from "@/UI/button";
+import { ButtonForm } from "@/UI/button";
 
 const FlightForm = () => {
   const formCtx = useContext(flightFormCtx);
@@ -22,13 +22,13 @@ const FlightForm = () => {
       ? returnDateref.current.value
       : formCtx.flightData.rDate;
     const adultPassenger = adultPassengerref.current
-      ? adultPassengerref.current.value as unknown
+      ? (adultPassengerref.current.value as unknown)
       : formCtx.flightData.passenger.adult;
     const childPassenger = childPassengerref.current
-      ? childPassengerref.current.value as unknown
+      ? (childPassengerref.current.value as unknown)
       : formCtx.flightData.passenger.child;
     const infantPassenger = infantPassengerref.current
-      ? infantPassengerref.current.value as unknown
+      ? (infantPassengerref.current.value as unknown)
       : formCtx.flightData.passenger.infant;
     const seatClass = seatClassref.current
       ? seatClassref.current.value
@@ -46,7 +46,6 @@ const FlightForm = () => {
     };
 
     formCtx.submitHandler(newFlightData);
-
   };
 
   return (
@@ -116,7 +115,7 @@ const FlightForm = () => {
           <span>Seat Class</span>
           <input type="text" ref={seatClassref} />
         </label>
-        <Button>Search Flight</Button>
+        <ButtonForm>Search Flight</ButtonForm>
       </form>
     </Fragment>
   );

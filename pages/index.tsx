@@ -1,9 +1,16 @@
+import { Fragment } from "react";
+import Button from "@/UI/button";
+
 const HomePage = () => {
-  return <h1>Hello TS</h1>;
-}
+  return (
+    <Fragment>
+      <h1>Hello TS</h1>
+      <Button href="/flight" name="Search For Flight" />
+    </Fragment>
+  );
+};
 
 export default HomePage;
-
 
 // import Head from 'next/head'
 // import Image from 'next/image'
